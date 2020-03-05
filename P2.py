@@ -70,11 +70,11 @@ def main():
 	linkList1 = linkList()
 	print("Before adding nodes, does the linklist empty?",linkList1.isEmpty())
 	linkList1.addNode(5)  
-	print("After add one more node ", linkList1.getSize())      
+	print("After add one more node,number of nodes: ", linkList1.getSize())      
 	linkList1.addNode(3)
-	print("After add one more node ", linkList1.getSize())
+	print("After add one more node,number of nodes: ", linkList1.getSize())
 	linkList1.addNode("American University")
-	print("After add one more node ",  linkList1.getSize())
+	print("After add one more node,number of nodes: ",  linkList1.getSize())
 	print("After adding nodes, does the linklist1 still empty?",linkList1.isEmpty())
 	
 
