@@ -5,9 +5,9 @@
 
 
 class node:
-	def __init__(self,data,nextpointer = None):
+	def __init__(self,data,nextPointer = None):
 		self.data = data
-		self. nextpointer = nextpointer
+		self. nextPointer = nextPointer
 
 	def getData (self):
 		return(self.data)
@@ -15,14 +15,15 @@ class node:
 	def setData(self,newData):
 		self.data = newData
 
-	def getNextpointer (self):
+	def getNextPointer (self):
 		return(self.nextpointer)
 
-	def setNextpointer (self,newNextpointer):
-		self.nextpointer = newNextpointer
-
+	def setNextPointer (self,newNextPointer):
+		self.nextPointer = newNextPointer
+		
 
 def main():
+	print("We can creat some nodes below")
  	pass
 
 

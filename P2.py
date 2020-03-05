@@ -1,13 +1,14 @@
 #P2
 #Mars Li
-#Feb.28.2020
-#10:00
+#March.4.2020
+#1:30h
 
 
 class node:
-	def __init__(self,data,nextpointer = None):
+	def __init__(self,data,nextPointer = None):
 		self.data = data
-		self. nextpointer = nextpointer
+		self.nextPointer = nextPointer
+	
 
 	def getData (self):
 		return(self.data)
@@ -15,11 +16,13 @@ class node:
 	def setData(self,newData):
 		self.data = newData
 
-	def getNextpointer (self):
-		return(self.nextpointer)
+	def getNextPointer (self):
+		return(self.nextPointer)
 
-	def setNextpointer (self,newNextpointer):
-		self.nextpointer = newNextpointer
+	def setNextPointer (self,newNextPointer):
+		self.nextPointer = newNextPointer
+
+
 
 class linkList:
 	def __init__ (self, size= 0, head = None, tail = None):
@@ -28,46 +31,53 @@ class linkList:
 		self.tail = tail
 
 	def getSize (self):
-		return(self.data)
+		return(self.size)
 
 	def setSize(self,newSize):
-		self.data = newSize
+		self.size = newSize
 
-	def getSize (self):
+	def getHead (self):
 		return(self.head)
 
 	def setHead(self,newHead):
-		self.data = newHead
+		self.head = newHead
 
-	def getSize (self):
+	def getTail (self):
 		return(self.tail)
 
 	def setTail(self,newTail):
-		self.data = newTail
+		self.tail = newTail
 
 	def isEmpty(self):
-		if(self.getSize()==0):
+		if(self.size == 0):
 			return(True)
-		return(False)
+		return(False)	
 
-	def addNode(self,newNode):
-		newNode = node(data = newNode)
+	def addNode(self,d):
+		newNode = node(data = d)
 
-		if(self.isEmpty()):
+		if (self.isEmpty()):
 			self.setHead(newNode)
 		else:
-			self.setTail().setNextpointer(newNode)
-			self.setTail(newNode)
-			self.setSize(self.size +1)
-
-
+			self.getTail().setNextPointer(newNode)
+			
+		self.setTail(newNode)
+		self.setSize(self.size +1)
+			
 
 
 def main():
- 	linkL = linkList()
- 	linkL.addNode(1000)
- 	linkL.addNode(2000)
- 	print(linkL.getSize())
- 	linkL.addNode("American University")
+	linkList1 = linkList()
+	print("Before adding nodes, does the linklist empty?",linkList1.isEmpty())
+	linkList1.addNode(5)  
+	print("After add one more node ", linkList1.getSize())      
+	linkList1.addNode(3)
+	print("After add one more node ", linkList1.getSize())
+	linkList1.addNode("American University")
+	print("After add one more node ",  linkList1.getSize())
+	print("After adding nodes, does the linklist1 still empty?",linkList1.isEmpty())
+	
+
+
 if __name__ == "__main__":
 	main()
